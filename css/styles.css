@@ -35,6 +35,8 @@ header ul {
 }
 header ul li {
   margin-left: 68px;
+}
+header ul li a {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
   letter-spacing: 1px;
@@ -45,8 +47,8 @@ header ul li {
 header ul li:nth-child(1) {
   margin-left: 0;
 }
-header ul li:nth-child(2) {
-  color: black;
+header ul li:nth-child(2) a {
+  color: #000;
 }
 
 .logo_container {
@@ -104,7 +106,7 @@ header ul li:nth-child(2) {
   top: 0;
   left: 0;
   z-index: -1;
-  background-image: url(../images/BG.png);
+  background-image: url(../Images/BG.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -191,7 +193,7 @@ header ul li:nth-child(2) {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  background-image: url(../images/video_preview.png);
+  background-image: url(../Images/video_preview.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
