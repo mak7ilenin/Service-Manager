@@ -20,17 +20,19 @@ header {
         justify-content: center;
         li {
             margin-left: 68px;
-            font-family: $main_font;
-            font-weight: 700;
-            letter-spacing: 1px;
-            font-size: 16px;
-            text-align: center;
-            color: #fff;
-            &:nth-child(1) {
-                margin-left: 0;
-            }
-            &:nth-child(2) {
-                color: black;
+            a {
+                font-family: $main_font;
+                font-weight: 700;
+                letter-spacing: 1px;
+                font-size: 16px;
+                text-align: center;
+                color: #fff;
+                &:nth-child(1) {
+                    margin-left: 0;
+                }
+                &:nth-child(2) {
+                    color: #000;
+                }
             }
         }
     }
@@ -86,7 +88,7 @@ header {
     top: 0;
     left: 0;
     z-index: -1;
-    background-image: url(../images/BG.png);
+    background-image: url(../Images/BG.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -167,7 +169,7 @@ header {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    background-image: url(../images/video_preview.png);
+    background-image: url(../Images/video_preview.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
