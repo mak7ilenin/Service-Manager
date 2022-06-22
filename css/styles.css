@@ -18,6 +18,10 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .wrapper {
   width: 1600px;
   margin: 0 auto;
@@ -44,11 +48,11 @@ header ul li a {
   text-align: center;
   color: #fff;
 }
+header ul li a:hover {
+  color: black;
+}
 header ul li:nth-child(1) {
   margin-left: 0;
-}
-header ul li:nth-child(2) a {
-  color: #000;
 }
 
 .logo_container {
@@ -238,7 +242,7 @@ header ul li:nth-child(2) a {
   text-transform: uppercase;
 }
 
-.home_page {
+.tools_page {
   width: 100%;
   margin-top: 70px;
   display: flex;
@@ -247,7 +251,7 @@ header ul li:nth-child(2) a {
   flex-wrap: wrap;
   font-family: "Raleway", sans-serif;
 }
-.home_page .top_container {
+.tools_page .top_container {
   width: 100%;
   margin-bottom: 80px;
   display: flex;
@@ -255,34 +259,57 @@ header ul li:nth-child(2) a {
   align-items: center;
   flex-wrap: wrap;
 }
-.home_page .top_container h2 {
+.tools_page .top_container h2 {
   width: 100%;
   text-align: center;
   font-size: 45px;
   margin-bottom: 10px;
 }
-.home_page .top_container h3 {
+.tools_page .top_container h3 {
   width: 100%;
   font-size: 25px;
   color: #b0bec5;
   font-weight: 600;
   text-align: center;
 }
-.home_page .top_container p {
+.tools_page .top_container p {
   width: 555px;
   line-height: 25px;
   text-align: center;
   font-size: 15px;
   color: #b0bec5;
 }
-.home_page .mid_container {
+.tools_page .mid_container {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
 }
-.home_page .bottom_container {
+.tools_page .mid_container .get_started_btn-container {
+  width: 100%;
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tools_page .mid_container .get_started_btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 55px;
+  border-radius: 5px;
+  background-color: #1de9b6;
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.15);
+}
+.tools_page .mid_container .get_started_btn a {
+  color: #fff;
+  font-size: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.tools_page .bottom_container {
   width: 100%;
   margin-top: 100px;
 }
@@ -314,31 +341,6 @@ header ul li:nth-child(2) a {
   font-size: 15px;
   font-weight: 400;
   color: #78909c;
-}
-
-.get_started_btn-container {
-  width: 100%;
-  margin-top: 80px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.get_started_btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 150px;
-  height: 55px;
-  border-radius: 5px;
-  background-color: #1de9b6;
-  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.15);
-}
-.get_started_btn a {
-  color: #fff;
-  font-size: 15px;
-  font-weight: bold;
-  text-transform: uppercase;
 }
 
 .advantages_line {
@@ -416,6 +418,9 @@ header ul li:nth-child(2) a {
   justify-content: center;
   margin-bottom: 20px;
 }
+.dropdown_info_container:nth-last-child(0) {
+  margin-bottom: 0;
+}
 
 .dropdown_info {
   width: 800px;
@@ -424,13 +429,13 @@ header ul li:nth-child(2) a {
   justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
-  cursor: pointer;
 }
 .dropdown_info .top {
   width: 100%;
   display: flex;
   align-items: center;
   flex-wrap: nowrap;
+  cursor: pointer;
 }
 .dropdown_info .top:hover {
   background-color: #f0f0f0;
@@ -440,6 +445,7 @@ header ul li:nth-child(2) a {
   text-transform: uppercase;
   font-weight: bold;
   font-size: 15px;
+  margin: 0;
 }
 .dropdown_info .dropdown_arrow {
   margin-right: 25px;
@@ -449,22 +455,26 @@ header ul li:nth-child(2) a {
 }
 .dropdown_info .info_img {
   width: 25px;
-  margin: 25px;
+  margin: 20px 25px 20px 25px;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.dropdown_info .info_img img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 .dropdown_info .hidden_info {
   width: 100%;
   padding: 25px;
   display: flex;
   align-items: center;
+}
+.dropdown_info .hidden_info .img_container {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dropdown_info .hidden_info .img_container img {
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .dropdown_info .hidden_info p {
   margin: 0;
@@ -473,4 +483,118 @@ header ul li:nth-child(2) a {
   letter-spacing: 30;
   font-weight: normal;
   text-transform: none;
+}
+
+.aboutUs_img {
+  width: 100%;
+  height: 564px;
+  margin-top: 100px;
+  position: absolute;
+  left: 0;
+  z-index: -1;
+  background-image: url(../Images/BG2.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.aboutUs_page {
+  width: 100%;
+  height: 564px;
+  margin-top: 100px;
+  display: flex;
+  align-items: center;
+}
+.aboutUs_page .left_block {
+  width: 32%;
+  display: flex;
+  flex-wrap: wrap;
+  font-family: "Raleway", sans-serif;
+}
+.aboutUs_page .left_block h2 {
+  color: #fff;
+  font-size: 45px;
+  font-weight: 600;
+  margin-bottom: 19px;
+}
+.aboutUs_page .left_block p {
+  color: #fff;
+  line-height: 25px;
+  font-size: 15px;
+  margin: 0;
+}
+.aboutUs_page .left_block .get_started_btn-container {
+  width: 100%;
+  margin-top: 78px;
+}
+.aboutUs_page .left_block .get_started_btn-container a div {
+  width: 150px;
+  height: 55px;
+  border-radius: 5px;
+  background-color: #061e37;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 15px;
+}
+.aboutUs_page .right_block {
+  width: 68%;
+  height: 564px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  font-family: "Raleway", sans-serif;
+}
+.aboutUs_page .right_block .container1 {
+  margin-bottom: 40px;
+}
+.aboutUs_page .right_block .arrow_container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 31%;
+}
+.aboutUs_page .right_block .arrow_container:nth-child(1) {
+  margin-top: 20px;
+}
+.aboutUs_page .right_block .arrow_container:nth-last-child(1) {
+  margin-bottom: 20px;
+}
+.aboutUs_page .right_block .person_container {
+  width: 100%;
+  height: 160px;
+  display: flex;
+  justify-content: flex-end;
+}
+.aboutUs_page .right_block .person_container .image_container {
+  width: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.aboutUs_page .right_block .person_container .text_field {
+  width: 60%;
+  background-color: #fff;
+  padding: 25px 30px 30px 30px;
+  border-radius: 5px;
+}
+.aboutUs_page .right_block .person_container .text_field .person_name {
+  width: 100%;
+}
+.aboutUs_page .right_block .person_container .text_field .person_name p {
+  height: auto;
+  color: #000;
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 25px;
+  font-style: normal;
+}
+.aboutUs_page .right_block .person_container .text_field p {
+  color: #78909c;
+  font-style: italic;
+  line-height: 25px;
+  margin: 0;
 }/*# sourceMappingURL=styles.css.map */
