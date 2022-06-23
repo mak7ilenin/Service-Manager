@@ -603,7 +603,7 @@ header ul li:nth-child(1) {
 }
 
 .team_page {
-  width: 40%;
+  width: 45%;
   margin: 0 auto;
   margin-top: 100px;
   font-family: "Raleway", sans-serif;
@@ -631,9 +631,11 @@ header ul li:nth-child(1) {
   margin-top: 50px;
 }
 .team_page p:nth-child(5) {
+  width: 95%;
   font-size: 15px;
   line-height: 25px;
   margin: 0;
+  margin: 0 auto;
 }
 .team_page .soc_medias {
   display: flex;
@@ -672,4 +674,109 @@ header ul li:nth-child(1) {
   background-repeat: no-repeat;
   background-size: cover;
   box-shadow: inset 0 0 10px 15px rgba(0, 0, 0, 0.7);
+}
+
+.help_page {
+  width: 40%;
+  margin: 0 auto;
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  font-family: "Raleway", sans-serif;
+}
+.help_page h2 {
+  font-size: 45px;
+  font-weight: 700;
+}
+.help_page p {
+  color: #061e37;
+  font-weight: 600;
+  margin: 0;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  text-align: center;
+  line-height: 25px;
+}
+
+form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+form input {
+  border-radius: 5px;
+  font-size: inherit;
+  font-weight: 500;
+  padding-left: 15px;
+}
+form .client_info {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+form .client_info input {
+  width: 265px;
+  height: 50px;
+  border: 1px solid #061e37;
+}
+form .client_info input::-moz-placeholder {
+  color: #061e37;
+  line-height: 25px;
+  font-size: 14px;
+  font-weight: 600;
+}
+form .client_info input:-ms-input-placeholder {
+  color: #061e37;
+  line-height: 25px;
+  font-size: 14px;
+  font-weight: 600;
+}
+form .client_info input::placeholder {
+  color: #061e37;
+  line-height: 25px;
+  font-size: 14px;
+  font-weight: 600;
+}
+form .client_info input:nth-child(1), form .client_info input:nth-child(2) {
+  margin-bottom: 20px;
+}
+form .client_info input:nth-child(1), form .client_info input:nth-child(3) {
+  margin-right: 40px;
+}
+form .client_info .client_message {
+  width: 592px;
+  padding-bottom: 100px;
+  margin-top: 20px;
+  margin-left: 2px;
+}
+form .bottom_form {
+  width: 96%;
+  height: 90px;
+  display: flex;
+  align-items: center;
+}
+form .bottom_form p {
+  margin: 0;
+}
+form .bottom_form .checkbox_container {
+  width: 100%;
+  display: flex;
+}
+form .bottom_form .checkbox_container input {
+  margin-top: 6.5px;
+  margin-right: 10px;
+}
+form .bottom_form .button button {
+  width: 130px;
+  height: 50px;
+  border: none;
+  border-radius: 5px;
+  background-color: #1de9b6;
+  color: #fff;
+  font-size: 16px;
+  line-height: 30px;
 }/*# sourceMappingURL=styles.css.map */
