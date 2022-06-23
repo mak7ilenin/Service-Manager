@@ -18,6 +18,11 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -26,6 +31,7 @@ html {
   width: 1600px;
   margin: 0 auto;
   margin-top: 60px;
+  min-height: 100%;
 }
 
 header {
@@ -76,6 +82,7 @@ header ul li:nth-child(1) {
   flex-wrap: wrap;
   font-family: "Raleway", sans-serif;
   text-transform: uppercase;
+  white-space: nowrap;
   font-size: 15px;
   color: #fff;
 }
@@ -97,7 +104,7 @@ header ul li:nth-child(1) {
   justify-content: center;
   align-items: center;
 }
-.signUp_button a {
+.signUp_button div {
   font-family: "Raleway", sans-serif;
   color: #fff;
   text-align: center;
@@ -149,14 +156,14 @@ header ul li:nth-child(1) {
   margin-bottom: 35px;
 }
 .info_block a {
-  text-transform: uppercase;
-  font-family: "Roboto", sans-serif;
-  font-size: 15px;
-}
-.info_block div {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.info_block div {
+  text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
 }
 
 .buy_button {
@@ -167,7 +174,7 @@ header ul li:nth-child(1) {
   box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.15);
   margin-right: 30px;
 }
-.buy_button a {
+.buy_button div {
   color: #fff;
 }
 
@@ -178,7 +185,7 @@ header ul li:nth-child(1) {
   background-color: rgb(255, 255, 255);
   box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.15);
 }
-.trial_button a {
+.trial_button div {
   color: #000;
   font-weight: 600;
 }
@@ -303,7 +310,7 @@ header ul li:nth-child(1) {
   background-color: #1de9b6;
   box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.15);
 }
-.tools_page .mid_container .get_started_btn a {
+.tools_page .mid_container .get_started_btn div {
   color: #fff;
   font-size: 15px;
   font-weight: bold;
@@ -384,9 +391,13 @@ header ul li:nth-child(1) {
   background-color: #ea80fc;
 }
 
+#service {
+  margin-top: 150px;
+}
+
 .service_page {
   width: 100%;
-  margin-top: 245px;
+  margin-top: 248px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -522,11 +533,11 @@ header ul li:nth-child(1) {
   font-size: 15px;
   margin: 0;
 }
-.aboutUs_page .left_block .get_started_btn-container {
-  width: 100%;
+.aboutUs_page .left_block .get_started_btn {
+  width: 150px;
   margin-top: 78px;
 }
-.aboutUs_page .left_block .get_started_btn-container a div {
+.aboutUs_page .left_block .get_started_btn div {
   width: 150px;
   height: 55px;
   border-radius: 5px;
@@ -665,6 +676,12 @@ header ul li:nth-child(1) {
 }
 .team_images div:nth-child(1), .team_images div:nth-child(3) {
   opacity: 0.3;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.team_images div:nth-child(1):hover, .team_images div:nth-child(3):hover {
+  transform: scale(1.02);
+  opacity: 0.45;
 }
 .team_images div:nth-child(2) {
   border-radius: 50%;
@@ -674,6 +691,10 @@ header ul li:nth-child(1) {
   background-repeat: no-repeat;
   background-size: cover;
   box-shadow: inset 0 0 10px 15px rgba(0, 0, 0, 0.7);
+}
+
+#help {
+  margin-top: 30px;
 }
 
 .help_page {
@@ -771,6 +792,7 @@ form .bottom_form .checkbox_container input {
   margin-right: 10px;
 }
 form .bottom_form .button button {
+  cursor: pointer;
   width: 130px;
   height: 50px;
   border: none;
@@ -779,4 +801,99 @@ form .bottom_form .button button {
   color: #fff;
   font-size: 16px;
   line-height: 30px;
+  box-shadow: 0px 6px 5px 0px rgba(0, 0, 0, 0.15);
+}
+
+footer {
+  min-width: 100%;
+  height: 300px;
+  margin-top: 100px;
+  background-color: #061e37;
+  font-family: "Raleway", sans-serif;
+}
+
+.footer_wrapper {
+  width: 1600px;
+  height: 300px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.footer_wrapper .left_block {
+  width: 65%;
+  height: 40%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.footer_wrapper .left_block .logo_container {
+  width: 100%;
+  height: 30px;
+}
+.footer_wrapper .left_block .other_info {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.footer_wrapper .left_block .other_info a {
+  cursor: pointer;
+  color: #fff;
+  margin: 0;
+  font-size: 15px;
+  line-height: 25px;
+  font-weight: lighter;
+  margin-right: 20px;
+}
+.footer_wrapper .left_block .other_info a:nth-last-child(1) {
+  margin-right: 0;
+}
+.footer_wrapper .left_block .other_info a:nth-child(2)::before {
+  content: "";
+  display: inline-block;
+  margin: 2px;
+  align-items: center;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #fff;
+  margin-right: 20px;
+}
+.footer_wrapper .left_block .other_info a:nth-child(2)::after {
+  content: "";
+  display: inline-block;
+  margin: 2px;
+  align-items: center;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #fff;
+  margin-left: 20px;
+}
+.footer_wrapper .right_block {
+  width: 35%;
+  height: 50%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.footer_wrapper .right_block .navigation {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.footer_wrapper .right_block .navigation a {
+  color: #fff;
+  font-size: 15px;
+  line-height: 25px;
+  font-weight: 600;
+  text-align: right;
+  margin: 0;
+}
+.footer_wrapper .right_block .soc_medias {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }/*# sourceMappingURL=styles.css.map */

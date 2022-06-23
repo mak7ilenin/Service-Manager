@@ -4,7 +4,7 @@ $dark_blue: #061e37;
 
 
 a{text-decoration: none; color: black; margin: 0; padding: 0}; li{list-style: none;}; 
-ul{margin: 0; padding: 0}; h1, h2, h3, h4, h5, h6{margin: 0;};
+ul{margin: 0; padding: 0}; h1, h2, h3, h4, h5, h6{margin: 0;}; body {margin: 0; padding: 0}
 
 
 html {
@@ -14,6 +14,7 @@ html {
     width: 1600px;
     margin: 0 auto;
     margin-top: 60px;
+    min-height: 100%;
 }
 header {
     width: 100%;
@@ -60,6 +61,7 @@ header {
     flex-wrap: wrap;
     font-family: $main_font;
     text-transform: uppercase;
+    white-space: nowrap;
     font-size: 15px;
     color: #fff;
     p {
@@ -79,7 +81,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    a {
+    div {
         font-family: $main_font;
         color: #fff;
         text-align: center;
@@ -128,14 +130,14 @@ header {
         margin-bottom: 35px;
     }
     a {
-        text-transform: uppercase;
-        font-family: 'Roboto', sans-serif;
-        font-size: 15px;
-    }
-    div {
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+    div {
+        text-transform: uppercase;
+        font-family: 'Roboto', sans-serif;
+        font-size: 15px;
     }
 }
 .buy_button {
@@ -145,7 +147,7 @@ header {
     background-color: $dark_blue;
     box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.15);
     margin-right: 30px;
-    a {
+    div {
         color: #fff;
     }
 }
@@ -155,7 +157,7 @@ header {
     border-radius: 5px;
     background-color: rgb(255, 255, 255);
     box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.15);
-    a {
+    div {
         color: #000;
         font-weight: 600;
     }
@@ -275,7 +277,7 @@ header {
             border-radius: 5px;
             background-color: #1de9b6;
             box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.15);
-            a {
+            div {
                 color: #fff;
                 font-size: 15px;
                 font-weight: bold;
@@ -359,9 +361,13 @@ header {
 
 
 // Services page
+
+#service {
+    margin-top: 150px;
+}
 .service_page {
     width: 100%;
-    margin-top: 245px;
+    margin-top: 248px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -493,23 +499,21 @@ header {
             font-size: 15px;
             margin: 0;
         }
-        .get_started_btn-container {
-            width: 100%;
+        .get_started_btn {
+            width: 150px;
             margin-top: 78px;
-            a {
-                div {
-                    width: 150px;
-                    height: 55px;
-                    border-radius: 5px;
-                    background-color: $dark_blue;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    color: #fff;
-                    text-transform: uppercase;
-                    font-weight: bold;
-                    font-size: 15px;
-                }
+            div {
+                width: 150px;
+                height: 55px;
+                border-radius: 5px;
+                background-color: $dark_blue;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: #fff;
+                text-transform: uppercase;
+                font-weight: bold;
+                font-size: 15px;
             }
         }
     }
@@ -636,6 +640,12 @@ header {
         justify-content: center;
         &:nth-child(1), &:nth-child(3) {
             opacity: 0.3;
+            cursor: pointer;
+            transition: all .2s;
+            &:hover {
+                transform: scale(1.02);
+                opacity: 0.45;
+            }
         }
         &:nth-child(2) {
             border-radius: 50%;
@@ -647,6 +657,10 @@ header {
             box-shadow: inset 0 0 10px 15px rgba(0, 0, 0, 0.7);
         }
     }
+}
+
+#help {
+    margin-top: 30px
 }
 .help_page {
     width: 40%;
@@ -729,6 +743,7 @@ form {
         }
         .button {
             button {
+                cursor: pointer;
                 width: 130px;
                 height: 50px;
                 border: none;
@@ -737,7 +752,102 @@ form {
                 color: #fff;
                 font-size: 16px;
                 line-height: 30px;
+                box-shadow: 0px 6px 5px 0px rgba(0, 0, 0, 0.15);
             }
+        }
+    }
+}
+footer {
+    min-width: 100%;
+    height: 300px;
+    margin-top: 100px;
+    background-color: $dark_blue;
+    font-family: $main_font;
+}
+.footer_wrapper {
+    width: 1600px;
+    height: 300px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    .left_block {
+        width: 65%;
+        height: 40%;
+        display: flex;
+        flex-wrap: wrap;
+        .logo_container {
+            width: 100%;
+            height: 30px;
+        }
+        .other_info {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            flex-wrap: nowrap;
+            a {
+                cursor: pointer;
+                color: #fff;
+                margin: 0;
+                font-size: 15px;
+                line-height: 25px;
+                font-weight: lighter;
+                margin-right: 20px;
+                &:nth-last-child(1) {
+                    margin-right: 0;
+                }
+                &:nth-child(2) {
+                    &::before {
+                        content: '';
+                        display: inline-block;
+                        margin: 2px;
+                        align-items: center;
+                        width: 5px;
+                        height: 5px;
+                        border-radius: 50%;
+                        background-color: #fff;
+                        margin-right: 20px;
+                    }
+                    &::after {
+                        content: '';
+                        display: inline-block;
+                        margin: 2px;
+                        align-items: center;
+                        width: 5px;
+                        height: 5px;
+                        border-radius: 50%;
+                        background-color: #fff;
+                        margin-left: 20px;
+                    }
+                }
+            }
+        }
+    }
+    .right_block {
+        width: 35%;
+        height: 50%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        flex-wrap: wrap;
+        .navigation {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            a {
+                color: #fff;
+                font-size: 15px;
+                line-height: 25px;
+                font-weight: 600;
+                text-align: right;
+                margin: 0;
+            }
+        }
+        .soc_medias {
+            width: 40%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
     }
 }
