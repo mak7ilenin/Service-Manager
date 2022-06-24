@@ -34,16 +34,16 @@ html {
   min-height: 100%;
 }
 
-a:not(header ul li a, header a, footer a) {
+a:not(header ul li a, header a, footer a, .video_block a) {
   transition: all 0.15s;
 }
-a:not(header ul li a, header a, footer a) div {
+a:not(header ul li a, header a, footer a, .video_block a) div {
   transition: all 0.15s;
 }
-a:not(header ul li a, header a, footer a):hover {
+a:not(header ul li a, header a, footer a, .video_block a):hover {
   transform: scale(1.04);
 }
-a:not(header ul li a, header a, footer a):hover > div {
+a:not(header ul li a, header a, footer a, .video_block a):hover > div {
   font-size: 15.5px;
   letter-spacing: 1px;
 }
@@ -241,6 +241,10 @@ header ul li:nth-child(1) {
   background-repeat: no-repeat;
   background-size: cover;
 }
+.video:hover > .video_container > .play_button-txt_container a {
+  font-size: 14px;
+  letter-spacing: 3px;
+}
 
 .video_container {
   display: flex;
@@ -255,6 +259,7 @@ header ul li:nth-child(1) {
   background-color: #061e37;
   border-radius: 5px;
   margin-bottom: 15px;
+  transition: all 0.2s;
 }
 .play_button a {
   width: 100%;
@@ -275,6 +280,7 @@ header ul li:nth-child(1) {
   align-items: center;
 }
 .play_button-txt_container a {
+  transition: all 0.2s;
   font-family: "Raleway", sans-serif;
   font-size: 12px;
   font-weight: bold;
