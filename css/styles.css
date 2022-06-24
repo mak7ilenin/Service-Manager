@@ -34,6 +34,20 @@ html {
   min-height: 100%;
 }
 
+a:not(header ul li a, header a, footer a) {
+  transition: all 0.15s;
+}
+a:not(header ul li a, header a, footer a) div {
+  transition: all 0.15s;
+}
+a:not(header ul li a, header a, footer a):hover {
+  transform: scale(1.04);
+}
+a:not(header ul li a, header a, footer a):hover > div {
+  font-size: 15.5px;
+  letter-spacing: 1px;
+}
+
 header {
   width: 100%;
   display: flex;
@@ -103,11 +117,29 @@ header ul li:nth-child(1) {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-image: linear-gradient(#fff, #fff);
+  background-position: 50% 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 1px;
+  transition: all 0.2s;
 }
 .signUp_button div {
   font-family: "Raleway", sans-serif;
   color: #fff;
   text-align: center;
+  transition: all 0.1s;
+}
+.signUp_button:hover {
+  transform: scale(1.04);
+  border-bottom-color: transparent;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  background-size: 100% 1px;
+}
+.signUp_button:hover:hover > div {
+  letter-spacing: 1px;
+  font-size: 17px;
 }
 
 .main_page_image {

@@ -16,6 +16,19 @@ html {
     margin-top: 60px;
     min-height: 100%;
 }
+a:not(header ul li a, header a, footer a) {
+    transition: all .15s;
+    div {
+        transition: all .15s;
+    }
+    &:hover {
+        transform: scale(1.04);
+        & > div {
+            font-size: 15.5px;
+            letter-spacing: 1px;
+        }
+    }
+}
 header {
     width: 100%;
     display: flex;
@@ -81,10 +94,28 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: linear-gradient(#fff, #fff);
+    background-position: 50% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 1px;
+    transition: all .2s;
     div {
         font-family: $main_font;
         color: #fff;
         text-align: center;
+        transition: all .1s;
+    }
+    &:hover {
+        transform: scale(1.04);
+        border-bottom-color: transparent;
+        border-top-color: transparent;
+        border-left-color: transparent;
+        border-right-color: transparent;
+        background-size: 100% 1px;
+        &:hover > div {
+            letter-spacing: 1px;
+            font-size: 17px;
+        }
     }
 }
 .main_page_image {
