@@ -509,11 +509,15 @@ header ul li:nth-child(1) {
   justify-content: center;
   align-items: center;
 }
+.dropdown_info #static_hidden_info {
+  display: flex;
+}
 .dropdown_info .hidden_info {
   width: 100%;
   padding: 25px;
   display: flex;
   align-items: center;
+  display: none;
 }
 .dropdown_info .hidden_info .img_container {
   width: 50%;
@@ -840,6 +844,12 @@ form .bottom_form .button button {
   font-size: 16px;
   line-height: 30px;
   box-shadow: 0px 6px 5px 0px rgba(0, 0, 0, 0.15);
+  transition: all 0.2s;
+}
+form .bottom_form .button button:hover {
+  transform: scale(1.04);
+  font-size: 16.5px;
+  letter-spacing: 1px;
 }
 
 footer {
