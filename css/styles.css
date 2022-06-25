@@ -509,11 +509,16 @@ header ul li:nth-child(1) {
   justify-content: center;
   align-items: center;
 }
+.dropdown_info #static_hidden_info {
+  display: flex;
+}
 .dropdown_info .hidden_info {
   width: 100%;
   padding: 25px;
-  display: flex;
   align-items: center;
+}
+.dropdown_info .hidden_info:not(#static_hidden_info) {
+  display: none;
 }
 .dropdown_info .hidden_info .img_container {
   width: 50%;

@@ -475,10 +475,15 @@ header {
         justify-content: center;
         align-items: center;
     }
+    #static_hidden_info {
+        display: flex;
+    }
     .hidden_info {
         width: 100%;
         padding: 25px;
-        display: flex;
+        &:not(#static_hidden_info) {
+            display: none;
+        }
         align-items: center;
         .img_container {
             width: 50%;

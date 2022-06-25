@@ -1,7 +1,12 @@
-// $(window).ready(function() {
-//     $('.hidden_info').css('display', 'none');
-//     $('#static_hidden_info').css('display', 'flex');
-// });
+$('.video_block').each(function() {
+    $(this).contents().wrap('<a href="https://www.youtube.com/embed/dAGpVZbWxTk"></a>');
+});
+
+// No longer relevant but works great
+$(window).ready(function() {
+    $('.hidden_info').css('display', 'none');
+    $('#static_hidden_info').css('display', 'flex');
+});
 window.addEventListener('load', (e) => {
     let hiddenElements = document.getElementsByClassName('hidden_info');
     for (let i = 0; i < hiddenElements.length; i++) {
@@ -10,9 +15,7 @@ window.addEventListener('load', (e) => {
     document.getElementById('static_hidden_info').style.display = 'flex';
 });
 
-$('.video_block').each(function() {
-    $(this).contents().wrap('<a href="https://www.youtube.com/embed/dAGpVZbWxTk"></a>');
-});
+// Without jquery
 
 // var dropdown = document.getElementsByClassName('dropdown_info');
 // for (let i = 0; i < dropdown.length; i++) {
