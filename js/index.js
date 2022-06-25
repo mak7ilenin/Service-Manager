@@ -1,11 +1,39 @@
+// $(window).ready(function() {
+//     $('.hidden_info').css('display', 'none');
+//     $('#static_hidden_info').css('display', 'flex');
+// });
+window.addEventListener('load', (e) => {
+    let hiddenElements = document.getElementsByClassName('hidden_info');
+    for (let i = 0; i < hiddenElements.length; i++) {
+        hiddenElements[i].style.display = 'none';
+    }
+    document.getElementById('static_hidden_info').style.display = 'flex';
+});
+
 $('.video_block').each(function() {
     $(this).contents().wrap('<a href="https://www.youtube.com/embed/dAGpVZbWxTk"></a>');
 });
 
-$('.top').click(function() {
-    $('.hidden_info').animate({
-        height: 'toggle'
-    }, "fast");
-    // $('.hidden_info').css('transform: translateY(-50%)');
-    // $('.hidden_info').toggle();
+// var dropdown = document.getElementsByClassName('dropdown_info');
+// for (let i = 0; i < dropdown.length; i++) {
+//     dropdown[i].addEventListener('click', (e) => {
+//         e.preventDefault();
+//         let hiddenElement = dropdown[i].getElementsByClassName('hidden_info');
+//         for (let i = 0; i < hiddenElement.length; i++) {
+//             if(hiddenElement[i].style.display == 'none') {
+//                 hiddenElement[i].style.display = 'flex';
+//             }else {
+//                 hiddenElement[i].style.display = 'none';
+//                 // hiddenElement[i].classList.toggle('hide');
+//             }
+//         }
+//     });
+// }
+
+$('.dropdown_info').click(function() {
+    var hidden = $(this).find('.hidden_info');
+    hidden.each(function() {
+        $('.hidden_info').not($(this).parent()).css('display', 'none');
+        $(this).css('display', 'flex');
+    });
 });

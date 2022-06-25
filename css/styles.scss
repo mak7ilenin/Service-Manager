@@ -475,23 +475,24 @@ header {
         justify-content: center;
         align-items: center;
     }
-    #static_hidden_info {
-        display: flex;
-    }
     .hidden_info {
         width: 100%;
         padding: 25px;
         display: flex;
         align-items: center;
-        display: none;
-        // transition: all .25s;
         .img_container {
             width: 50%;
+            height: 150px;
             display: flex;
             justify-content: center;
             align-items: center;
             img {
+                width: 100%;
+                height: 100%;
                 object-fit: cover;
+                &:not(#static_img) {
+                    border-radius: 5px;
+                }
             }
         }
         p {
@@ -503,6 +504,12 @@ header {
             text-transform: none;
         }
     }
+}
+.hide {
+    display: none;
+}
+.show {
+    display: flex;
 }
 
 // About us page
