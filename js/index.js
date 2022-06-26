@@ -38,7 +38,11 @@ $('.dropdown_info').click(function() {
     hidden.each(function() {
         // $('.hidden_info').not($(this).parent()).css('display', 'none');
         // $(this).css('display', 'flex');
-        $('.hidden_info').not($(this).parent()).animate({height: 'toggle'}, "slow");
-        $(this).animate({height: 'toggle'}, "slow");
+
+        $('.hidden_info').not($(this).parent()).slideUp();
+        if($(this).css('display') == 'none' || $(this).css('display') == 'block') {
+            $(this).slideDown();
+            $(this).css('display', 'flex');
+        }
     });
 });
