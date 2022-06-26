@@ -588,12 +588,24 @@ header {
             margin-right: 31%;
             img {
                 cursor: pointer;
+                transition: all .15s;
             }
             &:nth-child(1) {
                 margin-top: 20px;
+                img {
+                    &:hover {
+                        transform: scale(1.20);
+                    }
+                }
             }
             &:nth-last-child(1) {
                 margin-bottom: 20px;
+                img {
+                    transform: rotate(180deg);
+                    &:hover {
+                        transform: scale(-1.20);
+                    }
+                }
             }
         }
         .person_container {

@@ -36,7 +36,9 @@ window.addEventListener('load', (e) => {
 $('.dropdown_info').click(function() {
     var hidden = $(this).find('.hidden_info');
     hidden.each(function() {
-        $('.hidden_info').not($(this).parent()).css('display', 'none');
-        $(this).css('display', 'flex');
+        // $('.hidden_info').not($(this).parent()).css('display', 'none');
+        // $(this).css('display', 'flex');
+        $('.hidden_info').not($(this).parent()).animate({height: 'toggle'}, "slow");
+        $(this).animate({height: 'toggle'}, "slow");
     });
 });

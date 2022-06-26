@@ -626,12 +626,22 @@ header ul li:nth-child(1) {
 }
 .aboutUs_page .right_block .arrow_container img {
   cursor: pointer;
+  transition: all 0.15s;
 }
 .aboutUs_page .right_block .arrow_container:nth-child(1) {
   margin-top: 20px;
 }
+.aboutUs_page .right_block .arrow_container:nth-child(1) img:hover {
+  transform: scale(1.2);
+}
 .aboutUs_page .right_block .arrow_container:nth-last-child(1) {
   margin-bottom: 20px;
+}
+.aboutUs_page .right_block .arrow_container:nth-last-child(1) img {
+  transform: rotate(180deg);
+}
+.aboutUs_page .right_block .arrow_container:nth-last-child(1) img:hover {
+  transform: scale(-1.2);
 }
 .aboutUs_page .right_block .person_container {
   width: 100%;
