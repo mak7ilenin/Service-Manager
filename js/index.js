@@ -43,6 +43,50 @@ $('.dropdown_info').click(function() {
         if($(this).css('display') == 'none' || $(this).css('display') == 'block') {
             $(this).slideDown();
             $(this).css('display', 'flex');
+        }else {
+           $(this).slideUp();
         }
     });
+});
+
+
+var prevPerson = $('#previousPerson');
+var nextPerson = $('#nextPerson');
+
+var i1=0;
+nextPerson.click(function() {
+    if(i1 === 0 && i2 === 0) {
+        $('.right_block').animate({marginTop: '485px'});
+        nextPerson.css('display', 'none');
+        i1++;
+        console.log('i2 ' + i2 + ' i1 ' + i1);
+        return;
+    }
+    if(i2 === 1 && i1 === 0) {
+        $('.right_block').animate({marginTop: '0px'});
+        prevPerson.css('display', 'unset');
+        i1=0;
+        i2=0;
+        console.log('i2 ' + i2 + ' i1 ' + i1);
+        return;
+    }
+});
+
+var i2=0;
+prevPerson.click(function() {
+    if(i1 === 0 && i2 === 0) {
+        $('.right_block').animate({marginTop: '-485px'});
+        prevPerson.css('display', 'none');
+        i2++;
+        console.log('i2 ' + i2 + ' i1 ' + i1);
+        return;
+    }
+    if(i2 === 0 && i1 === 1) {
+        $('.right_block').animate({marginTop: '0px'});
+        nextPerson.css('display', 'unset');
+        i1=0;
+        i2=0;
+        console.log('i2 ' + i2 + ' i1 ' + i1);
+        return;
+    }
 });

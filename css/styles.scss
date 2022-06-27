@@ -534,6 +534,8 @@ header {
     width: 100%;
     height: 564px;
     margin-top: 100px;
+    overflow: hidden;
+    position: relative;
     display: flex;
     align-items: center;
     .left_block {
@@ -571,43 +573,50 @@ header {
             }
         }
     }
+    .arrow_container {
+        width: 100%;
+        position: absolute;
+        display: flex;
+        justify-content: flex-end;
+        right: 21%;
+        img {
+            cursor: pointer;
+            transition: all .15s;
+            width: 23px;
+            height: 14px;
+        }
+    }
+    .arrow1 {
+        margin-top: 20px;
+        top: 0;
+        img {
+            &:hover {
+                transform: scale(1.20);
+            }
+        }
+    }
+    .arrow2 {
+        margin-bottom: 20px;
+        bottom: 0;
+        img {
+            transform: rotate(180deg);
+            &:hover {
+                transform: scale(-1.20);
+            }
+        }
+    }
     .right_block {
         width: 68%;
-        height: 564px;
+        height: 970px;
+        max-height: 970px;
+        margin-top: 0;
         display: flex;
         align-items: center;
         flex-wrap: wrap;
+        position: relative;
+        overflow: hidden;
+        z-index: -1;
         font-family: $main_font;
-        .container1 {
-            margin-bottom: 40px;
-        }
-        .arrow_container {
-            width: 100%;
-            display: flex;
-            justify-content: flex-end;
-            margin-right: 31%;
-            img {
-                cursor: pointer;
-                transition: all .15s;
-            }
-            &:nth-child(1) {
-                margin-top: 20px;
-                img {
-                    &:hover {
-                        transform: scale(1.20);
-                    }
-                }
-            }
-            &:nth-last-child(1) {
-                margin-bottom: 20px;
-                img {
-                    transform: rotate(180deg);
-                    &:hover {
-                        transform: scale(-1.20);
-                    }
-                }
-            }
-        }
         .person_container {
             width: 100%;
             height: 160px;
@@ -835,6 +844,7 @@ footer {
     margin-top: 100px;
     background-color: $dark_blue;
     font-family: $main_font;
+    position: relative;
 }
 .footer_wrapper {
     width: 1600px;
@@ -895,7 +905,7 @@ footer {
             }
         }
     }
-    .right_block {
+    .right_block2 {
         width: 35%;
         height: 50%;
         display: flex;
