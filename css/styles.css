@@ -658,6 +658,13 @@ header ul li:nth-child(1) {
   display: flex;
   justify-content: flex-end;
 }
+.aboutUs_page .right_block .person_container:nth-child(1) .image_container img, .aboutUs_page .right_block .person_container:nth-last-child(1) .image_container img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 .aboutUs_page .right_block .person_container .image_container {
   width: 15%;
   display: flex;

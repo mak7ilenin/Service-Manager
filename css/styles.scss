@@ -622,6 +622,16 @@ header {
             height: 160px;
             display: flex;
             justify-content: flex-end;
+            &:nth-child(1), &:nth-last-child(1){
+                .image_container {
+                    img {
+                        width: 60px;
+                        height: 60px;
+                        border-radius: 50%;
+                        object-fit: cover;
+                    }
+                }
+            }
             .image_container {
                 width: 15%;
                 display: flex;
