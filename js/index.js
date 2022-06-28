@@ -1,3 +1,7 @@
+
+// JQUERY v3.6.0
+
+
 $('.video_block').each(function() {
     $(this).contents().wrap('<a href="https://www.youtube.com/embed/dAGpVZbWxTk"></a>');
 });
@@ -6,32 +10,17 @@ $('.video_block').each(function() {
 $(window).ready(function() {
     $('.hidden_info').css('display', 'none');
     $('#static_hidden_info').css('display', 'flex');
-});
-window.addEventListener('load', (e) => {
-    let hiddenElements = document.getElementsByClassName('hidden_info');
-    for (let i = 0; i < hiddenElements.length; i++) {
-        hiddenElements[i].style.display = 'none';
-    }
-    document.getElementById('static_hidden_info').style.display = 'flex';
+    // $('.main_person').css({
+    //     borderRadius: '50%',
+    //     width: '170px',
+    //     height: '170px',
+    //     backgroundImage: 'url(../Images/Ellipse\ 3.png)',
+    //     backgroundRepeat: 'no-repeat',
+    //     backgroundSize: 'cover',
+    //     boxShadow: 'inset 0 0 10px 15px rgba(0, 0, 0, 0.7)'
+    // });
 });
 
-// Without jquery
-
-// var dropdown = document.getElementsByClassName('dropdown_info');
-// for (let i = 0; i < dropdown.length; i++) {
-//     dropdown[i].addEventListener('click', (e) => {
-//         e.preventDefault();
-//         let hiddenElement = dropdown[i].getElementsByClassName('hidden_info');
-//         for (let i = 0; i < hiddenElement.length; i++) {
-//             if(hiddenElement[i].style.display == 'none') {
-//                 hiddenElement[i].style.display = 'flex';
-//             }else {
-//                 hiddenElement[i].style.display = 'none';
-//                 // hiddenElement[i].classList.toggle('hide');
-//             }
-//         }
-//     });
-// }
 
 $('.dropdown_info').click(function() {
     var hidden = $(this).find('.hidden_info');
@@ -92,17 +81,25 @@ prevPerson.click(function() {
 });
 
 
-var mainMember = $('.main_person:first');
+var mainMember = $('.main_person');
 var secondaryMember = $('.secondary_person');
 
 secondaryMember.click(function() {
+    let secondaries = document.getElementsByClassName('secondary_person');
+    for (let i = 0; i < secondaries.length; i++) {
+        var secondaryPerson = secondaries[i];
+    }
     let thisPerson = $(this);
     let thisSrc = $(this).children().attr('src');
     let badMainSrc = mainMember.css('backgroundImage');
     // url("http://127.0.0.1:5500/Images/Ellipse%203.png")
-    let mainSrc = badMainSrc.replace('url("http://127.0.0.1:5500/', '');
+    let mainSrc = badMainSrc
+        .replace('url("http://127.0.0.1:5500/', '')
+        .replace('%', ' ')
+        .replace('")', '')
+        .replace('20', '');
 
-    console.log(badMainSrc);
+    console.log('main ' + mainSrc);
     console.log(thisSrc);
 
     $(this).css({transition: 'all .4s'});
@@ -115,23 +112,26 @@ secondaryMember.click(function() {
     mainMember.css({transform: 'translateX(-220%)', opacity: '0.45'});
 
     setTimeout(function() {
-        mainMember.addClass('secondary_person');
-        mainMember.removeClass('main_person');
         mainMember.removeAttr('style');
-        mainMember.prepend('<img src="' + mainSrc + '">');
-        // mainMember.children().attr('src', thisSrc);
+        thisPerson.removeAttr('style');
+
+        mainMember.removeClass('main_person');
+        mainMember.addClass('secondary_person');
+        mainMember.prepend('<img src="">');
+        // mainMember.children().attr('src', mainSrc);
         
         thisPerson.addClass('main_person');
-        thisPerson.removeClass('secondary_person');
-        thisPerson.css({
-            borderRadius: '50%',
-            width: '170px',
-            height: '170px',
-            backgroundImage: 'url(' + thisSrc + ')',
-            backgroundRepeat: 'no-repeat',
-            backgroundSize: 'cover',
-            boxShadow: 'inset 0 0 10px 15px rgba(0, 0, 0, 0.7)'
-        });
         thisPerson.empty();
+        thisPerson.removeClass('secondary_person');
+        // thisPerson.css({
+        //     borderRadius: '50%',
+        //     width: '170px',
+        //     height: '170px',
+        //     backgroundImage: 'url(' + thisSrc + ')',
+        //     backgroundRepeat: 'no-repeat',
+        //     backgroundSize: 'cover',
+        //     boxShadow: 'inset 0 0 10px 15px rgba(0, 0, 0, 0.7)'
+        // });
+        // secondaryPerson.setAttribute("style", "background-image: url(" + thisSrc + ")");
     }, 200);
 });
