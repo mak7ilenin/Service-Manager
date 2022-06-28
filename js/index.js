@@ -90,3 +90,48 @@ prevPerson.click(function() {
         return;
     }
 });
+
+
+var mainMember = $('.main_person:first');
+var secondaryMember = $('.secondary_person');
+
+secondaryMember.click(function() {
+    let thisPerson = $(this);
+    let thisSrc = $(this).children().attr('src');
+    let badMainSrc = mainMember.css('backgroundImage');
+    // url("http://127.0.0.1:5500/Images/Ellipse%203.png")
+    let mainSrc = badMainSrc.replace('url("http://127.0.0.1:5500/', '');
+
+    console.log(badMainSrc);
+    console.log(thisSrc);
+
+    $(this).css({transition: 'all .4s'});
+    mainMember.css({transition: 'all .4s'});
+
+    $(this).children().css({width: '170px'});
+    $(this).css({transform: 'translateX(110%)', opacity: '1'});
+
+    mainMember.css({width: '100px', height: '100px'});
+    mainMember.css({transform: 'translateX(-220%)', opacity: '0.45'});
+
+    setTimeout(function() {
+        mainMember.addClass('secondary_person');
+        mainMember.removeClass('main_person');
+        mainMember.removeAttr('style');
+        mainMember.prepend('<img src="' + mainSrc + '">');
+        // mainMember.children().attr('src', thisSrc);
+        
+        thisPerson.addClass('main_person');
+        thisPerson.removeClass('secondary_person');
+        thisPerson.css({
+            borderRadius: '50%',
+            width: '170px',
+            height: '170px',
+            backgroundImage: 'url(' + thisSrc + ')',
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: 'cover',
+            boxShadow: 'inset 0 0 10px 15px rgba(0, 0, 0, 0.7)'
+        });
+        thisPerson.empty();
+    }, 200);
+});

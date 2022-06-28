@@ -723,24 +723,24 @@ header {
         display: flex;
         align-items: center;
         justify-content: center;
-        &:nth-child(1), &:nth-child(3) {
-            opacity: 0.3;
-            cursor: pointer;
-            transition: all .2s;
-            &:hover {
-                transform: scale(1.02);
-                opacity: 0.45;
-            }
+    }
+    .secondary_person {
+        opacity: 0.3;
+        cursor: pointer;
+        transition: all .2s;
+        &:hover {
+            transform: scale(1.02);
+            opacity: 0.45;
         }
-        &:nth-child(2) {
-            border-radius: 50%;
-            width: 170px;
-            height: 170px;
-            background-image: url(../Images/Ellipse\ 3.png);
-            background-repeat: no-repeat;
-            background-size: cover;
-            box-shadow: inset 0 0 10px 15px rgba(0, 0, 0, 0.7);
-        }
+    }
+    .main_person {
+        border-radius: 50%;
+        width: 170px;
+        height: 170px;
+        background-image: url(../Images/Ellipse\ 3.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        box-shadow: inset 0 0 10px 15px rgba(0, 0, 0, 0.7);
     }
 }
 
@@ -801,6 +801,10 @@ form {
             }
             &:nth-child(1), &:nth-child(3) {
                 margin-right: 40px;
+            }
+            &:nth-child(4)::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+                margin: 0
             }
         }
         .client_message {
