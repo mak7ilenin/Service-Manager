@@ -85,7 +85,19 @@ var firstPersonImage = $('#firstPerson').children().attr('src');
 var midPersonImage = $('#midPerson').children().attr('src');
 var thirdPersonImage = $('#thirdPerson').children().attr('src');
 
+var animationTime = 1100;
+var disabledClick = false;
+
 $('.secondary_person').click(function() {
+    if(disabledClick === true) {
+        return false;
+    }
+
+    disabledClick = true;
+    setTimeout(function() {
+        disabledClick = false;
+    }, animationTime)
+
     let thisPerson = $(this);
     let thisSrc = $(this).children().attr('src');
 
