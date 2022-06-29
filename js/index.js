@@ -81,12 +81,17 @@ prevPerson.click(function() {
 });
 
 
+var firstPersonImage = $('#firstPerson').children().attr('src');
+var midPersonImage = $('#midPerson').children().attr('src');
+var thirdPersonImage = $('#thirdPerson').children().attr('src');
+
 $('.secondary_person').click(function() {
     let thisPerson = $(this);
     let thisSrc = $(this).children().attr('src');
 
     var mainMember = $('.main_person');
     let mainPersSrc = mainMember.children().attr('src');
+
     
     // let badMainSrc = mainMember.css('backgroundImage');
     // url("http://127.0.0.1:5500/Images/Ellipse%203.png")
@@ -95,18 +100,18 @@ $('.secondary_person').click(function() {
     //     .replace('%', ' ')
     //     .replace('")', '')
     //     .replace('20', '');
-
+    
     // console.log('main ' + mainPersSrc);
     // console.log(thisSrc);
-
+    
     $(this).css({transition: 'all .4s'});
     mainMember.css({transition: 'all .4s'});
-
+    
+    $('#team_member_name').fadeOut(900);
+    
     thisPerson.children().animate({width: '170px', height: '170px'});
     mainMember.children().animate({width: '100px', height: '100px'});
     mainMember.css({width: '100px', height: '100px', boxShadow: 'none'});
-
-    $('#person_name')
 
     if(thisPerson.attr('id') === $('.secondary_person:first').attr('id')) {
         thisPerson.animate({left: '205px', opacity: '1'});
@@ -118,13 +123,15 @@ $('.secondary_person').click(function() {
         mainMember.animate({left: '230px', opacity: '0.45'});
     }
 
+    
+    
     setTimeout(function() {
         mainMember.removeAttr('style');
         thisPerson.removeAttr('style');
         
         thisPerson.children().attr('src', mainPersSrc);
         mainMember.children().attr('src', thisSrc);
-
+        
         thisPerson.css({transition: 'all .4s'});
         mainMember.css({transition: 'all .4s'});
         
@@ -133,13 +140,25 @@ $('.secondary_person').click(function() {
             width: '100px',
             height: '100px'
         });
-
+        
         mainMember.children().css({
             borderRadius: '50%',
             width: '160px',
             height: '160px',
         });
+
+        if(thisSrc === firstPersonImage) {
+            $('#team_member_name').text('Lana Milley');
+        }
+        if(thisSrc === midPersonImage) {
+            $('#team_member_name').text('Sophie Turner');
+        }
+        if(thisSrc === thirdPersonImage) {
+            $('#team_member_name').text('Eddie Maguare');
+        }
+        $('#team_member_name').fadeIn();
     }, 850);
+    
     setTimeout(function(){
         thisPerson.removeAttr('style');
         mainMember.removeAttr('style');
