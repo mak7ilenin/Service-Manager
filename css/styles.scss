@@ -556,8 +556,10 @@ header {
             margin: 0;
         }
         .get_started_btn {
-            width: 150px;
             margin-top: 78px;
+            &:hover {
+                margin-left: 3.5px;
+            }
             div {
                 width: 150px;
                 height: 55px;

@@ -593,8 +593,10 @@ header ul li:nth-child(1) {
   margin: 0;
 }
 .aboutUs_page .left_block .get_started_btn {
-  width: 150px;
   margin-top: 78px;
+}
+.aboutUs_page .left_block .get_started_btn:hover {
+  margin-left: 3.5px;
 }
 .aboutUs_page .left_block .get_started_btn div {
   width: 150px;
