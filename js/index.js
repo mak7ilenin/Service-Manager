@@ -81,57 +81,67 @@ prevPerson.click(function() {
 });
 
 
-var mainMember = $('.main_person');
-var secondaryMember = $('.secondary_person');
-
-secondaryMember.click(function() {
-    let secondaries = document.getElementsByClassName('secondary_person');
-    for (let i = 0; i < secondaries.length; i++) {
-        var secondaryPerson = secondaries[i];
-    }
+$('.secondary_person').click(function() {
     let thisPerson = $(this);
     let thisSrc = $(this).children().attr('src');
-    let badMainSrc = mainMember.css('backgroundImage');
-    // url("http://127.0.0.1:5500/Images/Ellipse%203.png")
-    let mainSrc = badMainSrc
-        .replace('url("http://127.0.0.1:5500/', '')
-        .replace('%', ' ')
-        .replace('")', '')
-        .replace('20', '');
 
-    console.log('main ' + mainSrc);
-    console.log(thisSrc);
+    var mainMember = $('.main_person');
+    let mainPersSrc = mainMember.children().attr('src');
+    
+    // let badMainSrc = mainMember.css('backgroundImage');
+    // url("http://127.0.0.1:5500/Images/Ellipse%203.png")
+    // let mainSrc = badMainSrc
+    //     .replace('url("http://127.0.0.1:5500/', '')
+    //     .replace('%', ' ')
+    //     .replace('")', '')
+    //     .replace('20', '');
+
+    // console.log('main ' + mainPersSrc);
+    // console.log(thisSrc);
 
     $(this).css({transition: 'all .4s'});
     mainMember.css({transition: 'all .4s'});
 
-    $(this).children().css({width: '170px'});
-    $(this).css({transform: 'translateX(110%)', opacity: '1'});
+    thisPerson.children().animate({width: '170px', height: '170px'});
+    mainMember.children().animate({width: '100px', height: '100px'});
+    mainMember.css({width: '100px', height: '100px', boxShadow: 'none'});
 
-    mainMember.css({width: '100px', height: '100px'});
-    mainMember.css({transform: 'translateX(-220%)', opacity: '0.45'});
+    $('#person_name')
+
+    if(thisPerson.attr('id') === $('.secondary_person:first').attr('id')) {
+        thisPerson.animate({left: '205px', opacity: '1'});
+        mainMember.animate({right: '230px', opacity: '0.45'});
+    }
+
+    if(thisPerson.attr('id') === $('.secondary_person:last').attr('id')) {
+        thisPerson.animate({right: '205px', opacity: '1'});
+        mainMember.animate({left: '230px', opacity: '0.45'});
+    }
 
     setTimeout(function() {
         mainMember.removeAttr('style');
         thisPerson.removeAttr('style');
-
-        mainMember.removeClass('main_person');
-        mainMember.addClass('secondary_person');
-        mainMember.prepend('<img src="">');
-        // mainMember.children().attr('src', mainSrc);
         
-        thisPerson.addClass('main_person');
-        thisPerson.empty();
-        thisPerson.removeClass('secondary_person');
-        // thisPerson.css({
-        //     borderRadius: '50%',
-        //     width: '170px',
-        //     height: '170px',
-        //     backgroundImage: 'url(' + thisSrc + ')',
-        //     backgroundRepeat: 'no-repeat',
-        //     backgroundSize: 'cover',
-        //     boxShadow: 'inset 0 0 10px 15px rgba(0, 0, 0, 0.7)'
-        // });
-        // secondaryPerson.setAttribute("style", "background-image: url(" + thisSrc + ")");
-    }, 200);
+        thisPerson.children().attr('src', mainPersSrc);
+        mainMember.children().attr('src', thisSrc);
+
+        thisPerson.css({transition: 'all .4s'});
+        mainMember.css({transition: 'all .4s'});
+        
+        thisPerson.children().css({
+            borderRadius: '50%',
+            width: '100px',
+            height: '100px'
+        });
+
+        mainMember.children().css({
+            borderRadius: '50%',
+            width: '160px',
+            height: '160px',
+        });
+    }, 850);
+    setTimeout(function(){
+        thisPerson.removeAttr('style');
+        mainMember.removeAttr('style');
+    }, 850);
 });

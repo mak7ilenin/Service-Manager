@@ -714,6 +714,7 @@ header {
 }
 .team_images {
     width: 100%;
+    height: 170px;
     margin-top: 100px;
     display: flex;
     justify-content: space-evenly;
@@ -723,11 +724,13 @@ header {
         display: flex;
         align-items: center;
         justify-content: center;
+        position: relative;
+        transition: ease all .3s;
+        // transition-timing-function: cubic-bezier(.76,.02,.42,.66);
     }
     .secondary_person {
         opacity: 0.3;
         cursor: pointer;
-        transition: all .2s;
         &:hover {
             transform: scale(1.02);
             opacity: 0.45;
@@ -737,10 +740,11 @@ header {
         border-radius: 50%;
         width: 170px;
         height: 170px;
-        background-image: url(../Images/Ellipse\ 3.png);
-        background-repeat: no-repeat;
-        background-size: cover;
-        box-shadow: inset 0 0 10px 15px rgba(0, 0, 0, 0.7);
+        opacity: 1;
+        // background-image: url(../Images/Ellipse\ 3.png);
+        // background-repeat: no-repeat;
+        // background-size: cover;
+        box-shadow: inset 0 0 10px 15px rgba(0, 0, 0, 0.5);
     }
 }
 

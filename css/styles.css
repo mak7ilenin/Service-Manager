@@ -746,6 +746,7 @@ header ul li:nth-child(1) {
 
 .team_images {
   width: 100%;
+  height: 170px;
   margin-top: 100px;
   display: flex;
   justify-content: space-evenly;
@@ -756,11 +757,12 @@ header ul li:nth-child(1) {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  transition: ease all 0.3s;
 }
 .team_images .secondary_person {
   opacity: 0.3;
   cursor: pointer;
-  transition: all 0.2s;
 }
 .team_images .secondary_person:hover {
   transform: scale(1.02);
@@ -770,10 +772,8 @@ header ul li:nth-child(1) {
   border-radius: 50%;
   width: 170px;
   height: 170px;
-  background-image: url(../Images/Ellipse\ 3.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  box-shadow: inset 0 0 10px 15px rgba(0, 0, 0, 0.7);
+  opacity: 1;
+  box-shadow: inset 0 0 10px 15px rgba(0, 0, 0, 0.5);
 }
 
 #help {
