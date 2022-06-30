@@ -1,0 +1,89 @@
+header {
+    width: 100%;
+    display: flex;
+    ul {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        li {
+            margin-left: 68px;
+            a {
+                font-family: $main_font;
+                font-weight: 700;
+                letter-spacing: 1px;
+                font-size: 16px;
+                text-align: center;
+                color: #fff;
+                &:hover {
+                    color: black;
+                }
+            }
+            &:nth-child(1) {
+                margin-left: 0;
+            }
+        }
+    }
+}
+.logo_container {
+    width: 15%;
+    display: flex;
+}
+.logo_img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo_txt {
+    margin-top: -2.5px;
+    margin-left: 12px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    font-family: $main_font;
+    text-transform: uppercase;
+    white-space: nowrap;
+    font-size: 15px;
+    color: #fff;
+    p {
+        width: 100%;
+        margin: 0;
+        &:nth-child(2) {
+            font-weight: bold;
+        }
+    }
+}
+.signUp_button {
+    width: 120px;
+    height: 30px;
+    border: 1px solid #fff;
+    border-radius: 2px;
+    margin-top: -5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(#fff, #fff);
+    background-position: 50% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 1px;
+    transition: all .2s;
+    div {
+        font-family: $main_font;
+        color: #fff;
+        text-align: center;
+        transition: all .1s;
+    }
+    &:hover {
+        transform: scale(1.04);
+        border-bottom-color: transparent;
+        border-top-color: transparent;
+        border-left-color: transparent;
+        border-right-color: transparent;
+        background-size: 100% 1px;
+        &:hover > div {
+            letter-spacing: 1px;
+            font-size: 17px;
+        }
+    }
+}

@@ -2,9 +2,10 @@
 // JQUERY v3.6.0
 
 
-$('.video_block').each(function() {
-    $(this).contents().wrap('<a href="https://www.youtube.com/embed/dAGpVZbWxTk"></a>');
+$('.video').click(function() {
+    location.href = 'https://www.youtube.com/embed/dAGpVZbWxTk'
 });
+
 
 // No longer relevant but works great
 $(window).ready(function() {

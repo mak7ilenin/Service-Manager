@@ -28,7 +28,7 @@ html {
 }
 
 .wrapper {
-  width: 1600px;
+  width: 83.3%;
   margin: 0 auto;
   margin-top: 60px;
   min-height: 100%;
@@ -159,7 +159,6 @@ header ul li:nth-child(1) {
   height: 600px;
   margin-top: -30px;
   display: flex;
-  justify-content: flex-start;
   align-items: center;
 }
 
@@ -223,7 +222,7 @@ header ul li:nth-child(1) {
 }
 
 .video_block {
-  width: 70%;
+  width: 60%;
   margin-top: 40px;
   display: flex;
   justify-content: flex-end;
@@ -231,12 +230,12 @@ header ul li:nth-child(1) {
 }
 
 .video {
-  width: 600px;
+  width: 620px;
   height: 330px;
+  cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
   background-image: url(../Images/video_preview.png);
   background-repeat: no-repeat;
   background-size: cover;
@@ -992,4 +991,4 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}/*# sourceMappingURL=styles.css.map */
+}/*# sourceMappingURL=main.css.map */
