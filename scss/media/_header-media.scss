@@ -1,0 +1,20 @@
+header {
+    @include desktop {
+        li:not(li:nth-child(1)) {
+            margin-left: 35px;
+        }
+    }
+    @include rwd(1050) {
+        ul {
+            li {
+                a {
+                    font-size: 14px;
+                }
+            }
+        }
+        li:not(li:nth-child(1)) {
+            margin-left: 25px;
+        }
+    }
+}
+// 915px - burger

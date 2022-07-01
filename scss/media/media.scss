@@ -1,0 +1,32 @@
+@import "mixins";
+@import "header-media";
+@import "footer-media";
+
+.main_page_image {
+    @include rwd(1450) {
+        height: 940px;
+    }
+}
+.main_page {
+    @include rwd(1450) {
+        height: 850px;
+        flex-wrap: wrap;
+        justify-content: center;
+        .info_block {
+            width: 80%;
+            margin-top: 100px;
+            justify-content: center;
+            h1 {
+                text-align: center;
+            }
+            p {
+                width: 100%;
+                text-align: center;
+            }
+        }
+        .video_block {
+            width: 100%;
+            justify-content: center;
+        }
+    }
+}
