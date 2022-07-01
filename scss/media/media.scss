@@ -5,6 +5,7 @@
 .main_page_image {
     @include rwd(1450) {
         height: 940px;
+        background-position: center;
     }
 }
 .main_page {
@@ -27,6 +28,56 @@
         .video_block {
             width: 100%;
             justify-content: center;
+        }
+    }
+}
+.advantages_line {
+    @include rwd(1050) {
+        flex-wrap: wrap;
+        .column {
+            width: 50%;
+        }
+    }
+    @include rwd(500) {
+        .column {
+            width: 100%;
+            .img_container {
+                .img_round {
+                    width: 70px;
+                    height: 70px;
+                    img {
+                        width: 25px;
+                    }
+                }
+            }
+            p {
+                font-size: 26px;
+            }
+        }
+        @include phone {
+            .column {
+                .img_container {
+                    .img_round {
+                        width: 60px;
+                        height: 60px;
+                        img {
+                            width: auto;
+                        }
+                    }
+                }
+                p {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}
+.title_column {
+    @include tablet {
+        width: 100%;
+        margin-bottom: 40px;
+        &:nth-child(3) {
+            margin-bottom: 0;
         }
     }
 }

@@ -81,10 +81,16 @@ a:not(header ul li a, header a, footer a, .video_block a) {
         justify-content: center;
         align-items: center;
     }
-    div {
-        text-transform: uppercase;
-        font-family: 'Roboto', sans-serif;
-        font-size: 15px;
+    .info_buttons {
+        display: flex;
+        align-items: center;
+        a {
+            div {
+                text-transform: uppercase;
+                font-family: 'Roboto', sans-serif;
+                font-size: 15px;
+            }
+        }
     }
 }
 .buy_button {
@@ -111,7 +117,7 @@ a:not(header ul li a, header a, footer a, .video_block a) {
 }
 .video_block {
     width: 60%;
-    margin-top: 40px;
+    margin-top: 30px;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -250,6 +256,7 @@ a:not(header ul li a, header a, footer a, .video_block a) {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    margin-bottom: 35px;
     .img_container {
         width: 100%;
         display: flex;
@@ -284,16 +291,24 @@ a:not(header ul li a, header a, footer a, .video_block a) {
         justify-content: center;
         align-items: center;
         .img_container {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            background-color: #fff;
-            margin-right: 23px;
+            width: 50%;
+            height: 150px;
             display: flex;
-            justify-content: center;
+            justify-content: flex-end;
             align-items: center;
+            .img_round {
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+                background-color: #fff;
+                margin-right: 23px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
         }
         p {
+            width: 50%;
             color: #fff;
             font-weight: 800;
             font-size: 20px;

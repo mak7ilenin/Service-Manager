@@ -7,6 +7,22 @@ $('.video').click(function() {
 });
 
 
+$(window).resize(function() {
+    if($(window).width() < 1450) {
+        var info_block_margin = parseInt($('.info_block').css('margin-top'), 10);
+        var video_block_margin = parseInt($('.video_block').css('margin-top'), 10);
+        var wrapper_margin = parseInt($('.wrapper').css('margin-top'), 10);
+        var autoHeight = ($('.info_block').height() + info_block_margin) 
+                    + ($('.video_block').height() + video_block_margin) 
+                    + wrapper_margin;
+        
+        $('.main_page_image').css({'height': autoHeight + 100});
+        $('.main_page').css({'height': autoHeight});
+        console.log(autoHeight)
+    }
+});
+
+
 // No longer relevant but works great
 $(window).ready(function() {
     $('.hidden_info').css('display', 'none');
