@@ -5,10 +5,11 @@
 
 .wrapper {
     @include tablet {
-        width: 100%;
+        width: 98%;
     }
 }
 
+// Main page
 .main_page_image {
     @include rwd(1450) {
         height: 940px;
@@ -35,6 +36,60 @@
         .video_block {
             width: 100%;
             justify-content: center;
+        }
+    }
+    @include rwd(650) {
+        .video_block {
+            margin: 0 5px;
+            .video {
+                width: 100%;
+            }
+        }
+    }
+    @include phone {
+        .info_block {
+            .info_buttons {
+                width: 100%;
+                flex-wrap: wrap;
+                .buy_button {
+                    width: 95%;
+                    margin-right: 0;
+                    margin: 0 auto;
+                }
+                .trial_button {
+                    width: 95%;
+                }
+                a {
+                    margin: 15px auto;
+                    div {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Tools page
+.tools_page {
+    @include rwd(1050) {
+        margin-bottom: calc((150px * 2) + 98px);
+    }
+    @include rwd(600) {
+        margin-bottom: calc((150px * 4) + 98px);
+    }
+    .mid_container {
+        @include tablet {
+            justify-content: center;
+        }
+    }
+    .title_column {
+        @include tablet {
+            width: 80%;
+            margin-bottom: 40px;
+            &:nth-child(3) {
+                margin-bottom: 0;
+            }
         }
     }
 }
@@ -80,26 +135,3 @@
         }
     }
 }
-.tools_page {
-    @include rwd(1050) {
-        margin-bottom: calc((150px * 2) + 98px);
-    }
-    @include rwd(600) {
-        margin-bottom: calc((150px * 4) + 98px);
-    }
-    .mid_container {
-        @include tablet {
-            justify-content: center;
-        }
-    }
-    .title_column {
-        @include tablet {
-            width: 80%;
-            margin-bottom: 40px;
-            &:nth-child(3) {
-                margin-bottom: 0;
-            }
-        }
-    }
-}
-

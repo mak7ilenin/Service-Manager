@@ -8,6 +8,12 @@ $('.video').click(function() {
 
 
 $(window).resize(function() {
+    autoResizeMain();
+});
+$(window).ready(function() {
+    autoResizeMain();
+});
+function autoResizeMain() {
     if($(window).width() < 1450) {
         var info_block_margin = parseInt($('.info_block').css('margin-top'), 10);
         var video_block_margin = parseInt($('.video_block').css('margin-top'), 10);
@@ -20,22 +26,17 @@ $(window).resize(function() {
         $('.main_page').css({'height': autoHeight});
         console.log(autoHeight)
     }
-});
+    if($(window).width() >= 1450) {
+        $('.main_page_image').css({'height': '650px'});
+        $('.main_page').css({'height': '600px'});
+    }
+}
 
 
 // No longer relevant but works great
 $(window).ready(function() {
     $('.hidden_info').css('display', 'none');
     $('#static_hidden_info').css('display', 'flex');
-    // $('.main_person').css({
-    //     borderRadius: '50%',
-    //     width: '170px',
-    //     height: '170px',
-    //     backgroundImage: 'url(../Images/Ellipse\ 3.png)',
-    //     backgroundRepeat: 'no-repeat',
-    //     backgroundSize: 'cover',
-    //     boxShadow: 'inset 0 0 10px 15px rgba(0, 0, 0, 0.7)'
-    // });
 });
 
 
