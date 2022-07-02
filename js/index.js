@@ -13,8 +13,9 @@ $(window).resize(function() {
 $(window).ready(function() {
     autoResizeMain();
 });
+// scrollbar width is 16px
 function autoResizeMain() {
-    if($(window).width() < 1450) {
+    if($(window).width() < (1450 - 16)) {
         var info_block_margin = parseInt($('.info_block').css('margin-top'), 10);
         var video_block_margin = parseInt($('.video_block').css('margin-top'), 10);
         var wrapper_margin = parseInt($('.wrapper').css('margin-top'), 10);
@@ -26,7 +27,7 @@ function autoResizeMain() {
         $('.main_page').css({'height': autoHeight});
         console.log(autoHeight)
     }
-    if($(window).width() >= 1450) {
+    if($(window).width() >= (1450 - 16)) {
         $('.main_page_image').css({'height': '650px'});
         $('.main_page').css({'height': '600px'});
     }
@@ -63,7 +64,12 @@ var nextPerson = $('#nextPerson');
 var i1=0;
 nextPerson.click(function() {
     if(i1 === 0 && i2 === 0) {
-        $('.right_block').animate({marginTop: '485px'});
+        if($(window).width() > 1286) {
+            $('.right_block').animate({marginTop: '485px'});
+        }
+        if($(window).width() <= 1286) {
+            $('.right_block').animate({marginTop: '525px'});
+        }
         nextPerson.css('display', 'none');
         i1++;
         console.log('i2 ' + i2 + ' i1 ' + i1);
@@ -82,7 +88,12 @@ nextPerson.click(function() {
 var i2=0;
 prevPerson.click(function() {
     if(i1 === 0 && i2 === 0) {
-        $('.right_block').animate({marginTop: '-485px'});
+        if($(window).width() > 1286) {
+            $('.right_block').animate({marginTop: '-485px'});
+        }
+        if($(window).width() <= 1286) {
+            $('.right_block').animate({marginTop: '-525px'});
+        }
         prevPerson.css('display', 'none');
         i2++;
         console.log('i2 ' + i2 + ' i1 ' + i1);

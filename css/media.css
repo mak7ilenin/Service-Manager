@@ -137,4 +137,64 @@
   .advantages_line .column p {
     font-size: 20px;
   }
+}
+@media (max-width: 300px) {
+  .advantages_line .column .img_container .img_round {
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+  }
+  .advantages_line .column p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .service_page .top_container p {
+    width: 95%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .dropdown_info .hidden_info {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .dropdown_info .hidden_info .img_container {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  .dropdown_info .hidden_info p {
+    font-size: 18px;
+    letter-spacing: 1px;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 1286px) {
+  .aboutUs_page .right_block {
+    height: 1050px;
+    max-height: 1050px;
+  }
+}
+@media (max-width: 1286px) {
+  .aboutUs_page .right_block .person_container {
+    height: 210px;
+  }
+}
+@media (max-width: 1579px) {
+  .aboutUs_page .right_block .person_container .text_field p {
+    font-size: 14px;
+  }
+}
+@media (max-width: 1383px) {
+  .aboutUs_page .right_block .person_container .text_field p {
+    font-size: 13px;
+  }
+}
+@media (max-width: 1286px) {
+  .aboutUs_page .right_block .person_container .text_field p {
+    font-size: 14px;
+  }
 }/*# sourceMappingURL=media.css.map */

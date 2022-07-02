@@ -134,4 +134,79 @@
             }
         }
     }
+    @include rwd(300) {
+        .column {
+            .img_container {
+                .img_round {
+                    width: 50px;
+                    height: 50px;
+                    margin-right: 20px;
+                }
+            }
+            p {
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+// Services page
+.service_page {
+    .top_container {
+        p {
+            @include rwd(600) {
+                width: 95%;
+            }
+        }
+    }
+}
+.dropdown_info {
+    .hidden_info {
+        @include rwd(1000) {
+            flex-wrap: wrap;
+            justify-content: center;
+            .img_container {
+                width: 100%;
+                height: auto;
+                margin-bottom: 20px;
+            }
+            p {
+                font-size: 18px;
+                letter-spacing: 1px;
+                margin-left: 0;
+            }
+        }
+    }
+}
+
+// About us page
+.aboutUs_page {
+    .right_block {
+        @include rwd(1286) {
+            height: 1050px;
+            max-height: 1050px;
+        }
+        .person_container {
+            @include rwd(1286) {
+                height: 210px;
+            }
+            .text_field {
+                @include rwd(1579) {
+                    p {
+                        font-size: 14px;
+                    }
+                }
+                @include rwd(1383) {
+                    p {
+                        font-size: 13px;
+                    }
+                }
+                @include rwd(1286) {
+                    p {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
 }

@@ -321,7 +321,7 @@ a:not(header ul li a, header a, footer a, .video_block a):hover > div {
 }
 
 .video_block {
-  width: 60%;
+  width: 65%;
   margin-top: 30px;
   display: flex;
   justify-content: flex-end;
@@ -649,7 +649,6 @@ a:not(header ul li a, header a, footer a, .video_block a):hover > div {
   margin: 0;
   margin-left: 25px;
   line-height: 25px;
-  letter-spacing: 30;
   font-weight: normal;
   text-transform: none;
 }
@@ -801,6 +800,7 @@ a:not(header ul li a, header a, footer a, .video_block a):hover > div {
   font-style: normal;
 }
 .aboutUs_page .right_block .person_container .text_field p {
+  font-size: 16px;
   color: #78909c;
   font-style: italic;
   line-height: 25px;
@@ -808,7 +808,7 @@ a:not(header ul li a, header a, footer a, .video_block a):hover > div {
 }
 
 .team_page {
-  width: 45%;
+  width: 720px;
   margin: 0 auto;
   margin-top: 100px;
   font-family: "Raleway", sans-serif;
