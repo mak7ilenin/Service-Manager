@@ -75,8 +75,14 @@ $('.dropdown_info').click(function() {
 });
 
 
-var prevPerson = $('#previousPerson');
-var nextPerson = $('#nextPerson');
+if($(window).width() <= 768) {
+    var prevPerson = $('#previousPerson1');
+    var nextPerson = $('#nextPerson1');
+}
+if($(window).width() > 768) {
+    var prevPerson = $('#previousPerson');
+    var nextPerson = $('#nextPerson');
+}
 
 var i1=0;
 nextPerson.click(function() {
@@ -86,6 +92,9 @@ nextPerson.click(function() {
         }
         if($(window).width() <= 1286) {
             $('.right_block').animate({marginTop: '525px'});
+        }
+        if($(window).width() <= 768) {
+            $('.right_block').animate({marginTop: '425px'});
         }
         nextPerson.css('display', 'none');
         i1++;
@@ -110,6 +119,9 @@ prevPerson.click(function() {
         }
         if($(window).width() <= 1286) {
             $('.right_block').animate({marginTop: '-525px'});
+        }
+        if($(window).width() <= 768) {
+            $('.right_block').animate({marginTop: '-425px'});
         }
         prevPerson.css('display', 'none');
         i2++;

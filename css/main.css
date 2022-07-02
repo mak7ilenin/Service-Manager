@@ -869,6 +869,9 @@ a:not(header ul li a, header a, footer a, .video_block a):hover > div {
 .aboutUs_page .arrow2 img:hover {
   transform: scale(-1.2);
 }
+.aboutUs_page .arrow3, .aboutUs_page .arrow4 {
+  display: none;
+}
 .aboutUs_page .right_block {
   width: 68%;
   height: 970px;

@@ -540,6 +540,9 @@ a:not(header ul li a, header a, footer a, .video_block a) {
             }
         }
     }
+    .arrow3, .arrow4 {
+        display: none;
+    }
     .right_block {
         width: 68%;
         height: 970px;
