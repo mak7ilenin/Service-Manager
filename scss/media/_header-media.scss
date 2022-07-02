@@ -4,6 +4,13 @@ header {
             margin-left: 35px;
         }
     }
+    @include tablet {
+        width: 83.3%;
+        margin: 0 auto;
+    }
+    @include phone {
+        width: 95%;
+    }
     @include rwd(1050) {
         ul {
             li {
@@ -16,5 +23,19 @@ header {
             margin-left: 25px;
         }
     }
+    // 915px - burger
+    @include rwd(915) {
+        ul {
+            display: none;
+        }
+        .signUp_button {
+            display: none;
+        }
+        .burger_button {
+            display: unset;
+        }
+    }
+    // @include rwd(310) {
+        
+    // }
 }
-// 915px - burger

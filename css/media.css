@@ -3,12 +3,34 @@
     margin-left: 35px;
   }
 }
+@media (max-width: 768px) {
+  header {
+    width: 83.3%;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 390px) {
+  header {
+    width: 95%;
+  }
+}
 @media (max-width: 1050px) {
   header ul li a {
     font-size: 14px;
   }
   header li:not(li:nth-child(1)) {
     margin-left: 25px;
+  }
+}
+@media (max-width: 915px) {
+  header ul {
+    display: none;
+  }
+  header .signUp_button {
+    display: none;
+  }
+  header .burger_button {
+    display: unset;
   }
 }
 

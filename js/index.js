@@ -34,6 +34,23 @@ function autoResizeMain() {
 }
 
 
+// Burger menu
+$('#check').click(function () {
+    if($('#check').is(':checked')) {
+        $('.burger_container').show();
+        $('.burger_container').animate({'right': '0%'}, 10);
+        $('.burger_button').css({'position': 'fixed', 'margin-top': '-25px', 'right': '20px'});
+    }
+    else {
+        $('.burger_container').animate({'right': '-100%'}, 10);
+        $('.burger_button').removeAttr('style');
+        setTimeout(function () {
+            $('.burger_container').hide();
+        }, 800);
+    }
+});
+
+
 // No longer relevant but works great
 $(window).ready(function() {
     $('.hidden_info').css('display', 'none');
