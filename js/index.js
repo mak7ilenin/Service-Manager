@@ -58,7 +58,7 @@ $(window).ready(function () {
         $('input[type=checkbox]').prop('checked', false);
         $('.burger_button').show();
         $('.burger_button').css({'right': '15px'});
-        $('.burger_container').show();
+        $('.burger_container').hide();
     }
     if($(window).width() > 915 - 17) {
         $('.burger_container').animate({'right': '-100%'}, 10);
@@ -74,13 +74,13 @@ $(window).ready(function () {
 });
 $(window).resize(function() {
     if($(window).width() <= 915 - 17) {
-        if($('input[type=checkbox]').prop('checked') == true) {
-
+        if($('#check').is(':checked')) {
+            
         }else {
             $('input[type=checkbox]').prop('checked', false);
             $('.burger_button').show();
             $('.burger_button').css({'right': '15px'});
-            $('.burger_container').show();
+            $('.burger_container').hide();
         }
     }
     if($(window).width() > 915 - 17) {
