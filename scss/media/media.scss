@@ -182,51 +182,92 @@
 // About us page
 .aboutUs_img {
     @include tablet {
-        height: 850px;
+        height: 680px;
+        margin-top: 80px;
     }
 }
 .aboutUs_page {
+    .left_block {
+        @include rwd(1644) {
+            .get_started_btn {
+                margin-top: 20px;
+            }
+        }
+    }
+    .right_block {
+        @include rwd(1286) {
+            height: 1050px;
+            max-height: 1050px;
+        }
+        .person_container {
+            .text_field {
+                @include rwd(1579) {
+                    p {
+                        font-size: 14px;
+                    }
+                }
+                @include rwd(1383) {
+                    p {
+                        font-size: 13px;
+                    }
+                }
+                @include rwd(1286) {
+                    padding: 15px 25px;
+                    p {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
     @include tablet {
-        height: 850px;
         flex-wrap: wrap;
         .arrow1, .arrow2 {
             display: none;
         }
         .arrow_container {
+            width: 50%;
             right: 0;
-            left: 8%;
-            // position: relative;
-            justify-content: center;
+            top: 73.2%;
+            justify-content: flex-start;
         }
         .arrow3 {
+            left: 0;
             display: flex;
-            margin-top: 25px;
-            margin-bottom: 250px;
+            justify-content: flex-start;
             img {
+                padding: 5px;
+                transform: rotate(-90deg);
                 &:hover {
-                    transform: scale(1.20);
+                    transform: rotate(-75deg) scale(1.20);
                 }
             }
         }
         .arrow4 {
             display: flex;
-            margin-bottom: 11px;
-            bottom: 0;
+            justify-content: flex-end;
             img {
-                transform: rotate(180deg);
+                padding: 5px;
+                transform: rotate(90deg);
                 &:hover {
-                    transform: scale(-1.20);
+                    transform: rotate(75deg) scale(1.20);
                 }
             }
         }
         // NEED TO MAKE SOMETHING LIKE SLIDER
         .right_block {
             width: 90%;
-            flex-wrap: nowrap;
+            flex-wrap: wrap;
             margin: 0 auto;
-            margin-top: 25px;
+            margin-right: 50px;
+            margin-left: 50px;
+            height: 275px;
             .person_container {
+                position: absolute;
                 justify-content: center;
+                &:nth-child(2), &:nth-child(3), &:nth-child(4) {
+                    opacity: 0;
+                }
                 .text_field {
                     width: 85%;
                     margin-left: 20px;
@@ -249,31 +290,21 @@
             }
         }
     }
-    .right_block {
-        @include rwd(1286) {
-            height: 1050px;
-            max-height: 1050px;
-        }
-        .person_container {
-            @include rwd(1286) {
-                height: 210px;
-            }
-            .text_field {
-                @include rwd(1579) {
-                    p {
-                        font-size: 14px;
+    @include rwd(633) {
+        .right_block {
+            margin-top: 25px;
+            .person_container {
+                flex-wrap: wrap;
+                .image_container {
+                    width: 100%;
+                    margin-bottom: 25px;
+                    img {
+                        width: 100px;
+                        height: 100px;
                     }
                 }
-                @include rwd(1383) {
-                    p {
-                        font-size: 13px;
-                    }
-                }
-                @include rwd(1286) {
-                    padding: 12px 30px 30px 30px;
-                    p {
-                        font-size: 14px;
-                    }
+                .text_field {
+                    margin-left: 0;
                 }
             }
         }
