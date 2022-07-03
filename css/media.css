@@ -319,4 +319,28 @@
   .aboutUs_page .right_block .person_container .text_field {
     margin-left: 0;
   }
+}
+
+@media (max-width: 882px) {
+  .team_page {
+    width: 474px;
+  }
+}
+@media (max-width: 500px) {
+  .team_page {
+    width: 100%;
+  }
+  .team_page .team_images {
+    flex-wrap: wrap;
+    height: 400px;
+    margin-top: 30px;
+  }
+  .team_page .team_images div {
+    width: 100%;
+  }
+  .team_page .team_images .main_person {
+    width: auto;
+    height: auto;
+    margin: 20px 0;
+  }
 }/*# sourceMappingURL=media.css.map */

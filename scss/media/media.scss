@@ -310,3 +310,31 @@
         }
     }
 }
+
+// Team page 
+// 882px
+.team_page {
+    @include rwd(882) {
+        // width: 83.24%;
+        width: 474px;
+    }
+    @include rwd(500) {
+        width: 100%;
+        .team_images {
+            flex-wrap: wrap;
+            height: 400px;
+            margin-top: 30px;
+            div {
+                width: 100%;
+                // img {
+                //     transition: all .4s;
+                // }
+            }
+            .main_person {
+                width: auto;
+                height: auto;
+                margin: 20px 0;
+            }
+        }
+    }
+}

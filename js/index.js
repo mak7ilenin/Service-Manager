@@ -330,21 +330,46 @@ $('.secondary_person').click(function() {
     mainMember.css({transition: 'all .4s'});
     
     $('#team_member_name').fadeOut(900);
-    
+
     thisPerson.children().animate({width: '170px', height: '170px'});
     mainMember.children().animate({width: '100px', height: '100px'});
+    // thisPerson.children().css({transform: 'scale(1.7)'});
+    // mainMember.children().css({transform: 'scale(0.7)'});
     mainMember.css({width: '100px', height: '100px', boxShadow: 'none'});
-
-    if(thisPerson.attr('id') === $('.secondary_person:first').attr('id')) {
-        thisPerson.animate({left: '205px', opacity: '1'});
-        mainMember.animate({right: '230px', opacity: '0.45'});
+    
+    if ($(window).width() > 882) {
+        if(thisPerson.attr('id') === $('.secondary_person:first').attr('id')) {
+            thisPerson.animate({left: '205px', opacity: '1'});
+            mainMember.animate({right: '230px', opacity: '0.45'});
+        }
+        
+        if(thisPerson.attr('id') === $('.secondary_person:last').attr('id')) {
+            thisPerson.animate({right: '205px', opacity: '1'});
+            mainMember.animate({left: '230px', opacity: '0.45'});
+        }
     }
-
-    if(thisPerson.attr('id') === $('.secondary_person:last').attr('id')) {
-        thisPerson.animate({right: '205px', opacity: '1'});
-        mainMember.animate({left: '230px', opacity: '0.45'});
+    if($(window).width() <= 882 && $(window).width() > 500) {
+        if(thisPerson.attr('id') === $('.secondary_person:first').attr('id')) {
+            thisPerson.animate({left: '140px', opacity: '1'});
+            mainMember.animate({right: '160px', opacity: '0.45'});
+        }
+    
+        if(thisPerson.attr('id') === $('.secondary_person:last').attr('id')) {
+            thisPerson.animate({right: '140px', opacity: '1'});
+            mainMember.animate({left: '160px', opacity: '0.45'});
+        }
     }
-
+    if($(window).width() <= 500) {
+        if(thisPerson.attr('id') === $('.secondary_person:first').attr('id')) {
+            thisPerson.animate({top: '120px', opacity: '1'});
+            mainMember.animate({bottom: '190px', opacity: '0.45'});
+        }
+    
+        if(thisPerson.attr('id') === $('.secondary_person:last').attr('id')) {
+            thisPerson.animate({bottom: '120px', opacity: '1'});
+            mainMember.animate({top: '190px', opacity: '0.45'});
+        }
+    }
 
     setTimeout(function() {
         mainMember.removeAttr('style');
