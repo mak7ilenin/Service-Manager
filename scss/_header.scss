@@ -100,10 +100,10 @@ header {
     align-items: center;
     transition: all .3s;
     label {
-        display:flex;
-        flex-direction:column;
+        display: flex;
+        flex-direction: column;
         width: 50px;
-        cursor:pointer;
+        cursor: pointer;
         span {
             background: #fff;
             border-radius: 10px;
@@ -207,5 +207,5 @@ header {
     }
 }
 .burger_button {
-    display: none;
+    right: -150px;
 }

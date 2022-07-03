@@ -304,7 +304,7 @@ header ul li:nth-child(1) {
 }
 
 .burger_button {
-  display: none;
+  right: -150px;
 }
 
 a {
