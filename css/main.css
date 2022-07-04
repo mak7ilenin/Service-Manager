@@ -1017,7 +1017,7 @@ a:not(header ul li a, header a, footer a, .video_block a):hover > div {
 }
 
 .help_page {
-  width: 40%;
+  width: 635px;
   margin: 0 auto;
   margin-top: 100px;
   display: flex;

@@ -338,3 +338,47 @@
         }
     }
 }
+
+
+// Help page
+.help_page {
+    @include rwd(665) {
+        width: 100%;
+        h2 {
+            text-align: center;
+        }
+    }
+}
+form {
+    @include rwd(665) {
+        width: 95%;
+        .client_info {
+            width: 100%;
+            input {
+                width: 100%;
+                &:nth-child(1), &:nth-child(3) {
+                    margin-right: 0;
+                    margin-bottom: 20px;
+                }
+            }
+            .client_message {
+                width: 100%;
+                margin-left: 0;
+            }
+        }
+        .bottom_form {
+            width: 100%;
+        }
+    }
+    @include rwd(450) {
+        .bottom_form {
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            .checkbox_container {
+                width: 100%;
+                margin: 15px 0;
+                justify-content: flex-end;
+            }
+        }
+    }
+}
