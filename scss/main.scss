@@ -13,6 +13,7 @@ ul{margin: 0; padding: 0}; h1, h2, h3, h4, h5, h6{margin: 0;}; body {margin: 0; 
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden
 }
 .wrapper { 
     width: 83.3%;
@@ -665,7 +666,6 @@ a:not(header ul li a, header a, footer a, .video_block a) {
         justify-content: center;
         position: relative;
         transition: ease all .3s;
-        // transition-timing-function: cubic-bezier(.76,.02,.42,.66);
     }
     .secondary_person {
         opacity: 0.3;
@@ -680,9 +680,6 @@ a:not(header ul li a, header a, footer a, .video_block a) {
         width: 170px;
         height: 170px;
         opacity: 1;
-        // background-image: url(../Images/Ellipse\ 3.png);
-        // background-repeat: no-repeat;
-        // background-size: cover;
         box-shadow: inset 0 0 10px 15px rgba(0, 0, 0, 0.5);
     }
 }
