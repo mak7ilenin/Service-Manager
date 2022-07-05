@@ -28,7 +28,21 @@ var team_page_height = team_page.height() * 1.2;
 
 // Help page
 const help_page = $('.help_page');
-help_page.css({position: 'relative', opacity: 0, right: '200%'});
+const left_input1 = $('.first_input');
+const left_input2 = $('.third_input');
+const right_input1 = $('.second_input');
+const right_input2 = $('.fourth_input');
+const big_input = $('.client_message');
+
+help_page.css({position: 'relative', opacity: 0, top: '100px'});
+
+left_input1.css({position: 'relative', opacity: 0, left: '-100%'});
+left_input2.css({position: 'relative', opacity: 0, left: '-100%'});
+
+right_input1.css({position: 'relative', opacity: 0, right: '-100%'});
+right_input2.css({position: 'relative', opacity: 0, right: '-100%'});
+
+big_input.css({position: 'relative', opacity: 0, bottom: '50px'});
 
 var help_page_pos = help_page.position();
 var help_page_height = help_page.height() * 1.3;
@@ -49,6 +63,14 @@ $(window).scroll(() => {
         team_page.animate({opacity: 1, top: '0px'}, 700);
     }
     if($(window).scrollTop() >= help_page_pos.top - help_page_height) {
-        help_page.animate({opacity: 1, right: '0px'}, 1200);
+        help_page.animate({opacity: 1, top: '0px'}, 1200);
+
+        left_input1.animate({opacity: 1, left: '0%'}, 1100);
+        left_input2.animate({opacity: 1, left: '0%'}, 800);
+
+        right_input1.animate({opacity: 1, right: '0%'}, 800);
+        right_input2.animate({opacity: 1, right: '0%'}, 1100);
+
+        big_input.animate({opacity: 1, bottom: '0px'}, 800);
     }
 });
