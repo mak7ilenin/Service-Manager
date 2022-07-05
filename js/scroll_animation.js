@@ -147,13 +147,13 @@ $(window).scroll(() => {
     // Team page
     if(team_counter < 1) {
         if($(window).scrollTop() >= team_page_pos.top - team_page_height) {
-            team_counter++;
             team_page.animate({opacity: 1, top: '0px'}, 700, 'swing');
             setTimeout(() => {
                 team_page.removeAttr('style');
             }, 750)
         }
         if($(window).scrollTop() >= team_page_pos.top - (team_page_height / 100)) {
+            team_counter++;
             left_image.animate({left: '0%'}, 700, 'swing');
             right_image.animate({right: '0%'}, 700, 'swing');
     
