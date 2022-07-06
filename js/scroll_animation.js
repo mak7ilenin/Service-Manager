@@ -76,6 +76,11 @@ big_input.css({position: 'relative', opacity: 0, bottom: '50px'});
 var help_page_pos = help_page.position();
 var help_page_height = help_page.height() / 6;
 
+left_input1.hide();
+left_input2.hide();
+right_input1.hide();
+right_input2.hide();
+
 
 // Scroll animation in action
 let main_counter = 0;
@@ -169,6 +174,11 @@ $(window).scroll(() => {
     if(help_counter < 1) {
         if($(window).scrollTop() >= help_page_pos.top - help_page_height) {
             help_counter++;
+            left_input1.show();
+            left_input2.show();
+            right_input1.show();
+            right_input2.show();
+
             help_page.animate({opacity: 1, top: '0px'}, 1200);
     
             left_input1.animate({opacity: 1, left: '0%'}, 1100, 'swing');
@@ -178,6 +188,7 @@ $(window).scroll(() => {
             right_input2.animate({opacity: 1, right: '0%'}, 1100, 'swing');
     
             big_input.animate({opacity: 1, bottom: '0px'}, 800);
+
             setTimeout(() => {
                 help_page.removeAttr('style');
                 left_input1.removeAttr('style');
